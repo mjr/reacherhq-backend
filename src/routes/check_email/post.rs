@@ -171,7 +171,7 @@ async fn check_email(body: EndpointRequest) -> Result<impl warp::Reply, warp::Re
 /// Create the `POST /check_email` endpoint.
 pub fn post_check_email() -> impl Filter<Extract = impl warp::Reply, Error = warp::Rejection> + Clone
 {
-	warp::path!("v0" / "check_email")
+	warp::path!("v0" / "check-email")
 		.and(warp::post())
 		.and(check_header())
 		// When accepting a body, we want a JSON body (and to reject huge
